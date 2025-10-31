@@ -69,4 +69,54 @@
             <p>$85.000</p>
         </div>
     </div>
+</section><section class="shirts" id="camisas">
+    <h2>Nuestra colección</h2>
+    <div class="shirt-grid">
+        <div class="shirt" onclick="openPopup('camisa1.jpg', 'Camisa Negra Premium', 'Camisa con estilo sobrio y elegante. Perfecta para ocasiones formales.')">
+            <img src="imn/9.png" alt="Camisa 1">
+            <h3>Camisa Negra Premium</h3>
+            <p>$90.000</p>
+        </div>
+
+        <div class="shirt" onclick="openPopup('camisa2.jpg', 'Camisa Blanca Elegante', 'Diseño clásico que combina con todo, ideal para eventos o uso diario.')">
+            <img src="imn/6.png" alt="Camisa 2">
+            <h3>Camisa Blanca Elegante</h3>
+            <p>$85.000</p>
+        </div>
+
+        <div class="shirt" onclick="openPopup('camisa3.jpg', 'Camisa Azul Casual', 'Comodidad y estilo moderno en una sola prenda.')">
+            <img src="imn/4.png" alt="Camisa 3">
+            <h3>Camisa Azul Casual</h3>
+            <p>$88.000</p>
+        </div>
+    </div>
 </section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Camisa seleccionada">
+        <h3 id="popup-title"></h3>
+        <p id="popup-desc"></p>
+        <button>Comprar ahora</button>
+    </div>
+</div><footer>
+  <p>© 2025 Crown of Success</p>
+</footer>
+
+<script>
+function openPopup(img, title, desc) {
+    document.getElementById('popup').style.display = 'flex';
+    document.getElementById('popup-img').src = 'img/' + img;
+    document.getElementById('popup-title').textContent = title;
+    document.getElementById('popup-desc').textContent = desc;
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
